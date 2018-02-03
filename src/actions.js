@@ -31,3 +31,8 @@ export const showCompleted = () => ({
 export const clearTodoInput = () => ({
   type: C.CLEAR_TODOINPUT
 })
+
+export const setTodoInput = (text) => ({
+  type: C.SET_TODOINPUT,
+  payload: text
+})
