@@ -27,3 +27,7 @@ export const hideCompleted = () => ({
 export const showCompleted = () => ({
   type: C.SHOW_COMPLETED,
 })
+
+export const clearTodoInput = () => ({
+  type: C.CLEAR_TODOINPUT
+})
