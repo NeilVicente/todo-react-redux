@@ -1,6 +1,7 @@
 import appReducer from './reducers'
 import { createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
+import sampleData from '../initialState.json'
 
 const consoleMesssages = store => next => action => {
   let result
@@ -19,6 +20,12 @@ const consoleMesssages = store => next => action => {
   return result
 }
 
-export default (initialState = {}) => {
+const initialState = (localStorage['redux-todo']) ?
+  JSON.parse(localStorage['redux-todo']):
+  sampleData
+
+const storeFactory = (initialState = {}) => {
   return applyMiddleware(thunk, consoleMesssages)(createStore)(appReducer, initialState)
 }
+
+export default storeFactory(initialState)
