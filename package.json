@@ -5,13 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "./node_modules/.bin/webpack-dev-server"
+    "start": "open http://localhost:3000 && ./node_modules/.bin/webpack-dev-server"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "babel-core": "^6.26.0",
+    "material-ui": "^0.20.0",
     "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0"
   },
