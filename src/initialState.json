@@ -17,6 +17,7 @@
       "completed": false
     }
   ],
-  "showCompleted": true
+  "showCompleted": true,
+  "todoInput": ""
 }
 

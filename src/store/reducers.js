@@ -43,7 +43,19 @@ export const toggleCompleted = (state = true, action) => {
   }
 }
 
+export const todoInput = (state = '', action) => {
+  switch (action.type) {
+    case C.CLEAR_TODOINPUT:
+      return '';
+    case C.SET_TODOINPUT:
+      return action.payload.text
+    default:
+      return state
+  }
+}
+
 export default combineReducers({
   allTodos,
-  showCompleted: toggleCompleted
+  showCompleted: toggleCompleted,
+  todoInput
 })
