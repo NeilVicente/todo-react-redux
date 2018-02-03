@@ -1,0 +1,22 @@
+{
+  "allTodos": [
+    {
+      "text": "Buy Milk",
+      "completed": true
+    },
+    {
+      "text": "Buy Eggs",
+      "completed": false
+    },
+    {
+      "text": "Call Home",
+      "completed": false
+    },
+    {
+      "text": "Workout",
+      "completed": false
+    }
+  ],
+  "showCompleted": true
+}
+
