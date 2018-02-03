@@ -18,15 +18,17 @@ const TodoList = (props) => {
   }
   return (
     <div>
-      <Toggle
-        label='Show completed todos'
-        style={{
-          block: {
-            maxWidth: 250,
-          }}}
-        defaultToggled={ props.showCompleted }
-        onToggle={ props.onToggleCompleted }
-      />
+      <div>
+        <Toggle
+          label='Show completed todos'
+          style={{
+            block: {
+              maxWidth: 250,
+            }}}
+          defaultToggled={ props.showCompleted }
+          onToggle={ props.onToggleCompleted }
+        />
+      </div>
       <div>
         <List>
           { props.todos.map(createListItem) }
