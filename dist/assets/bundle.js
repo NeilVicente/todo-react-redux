@@ -16430,7 +16430,7 @@ exports.default = function () {
     )
   );
   return _react2.default.createElement(_Paper2.default, {
-    style: { margin: '40px auto' },
+    style: { width: '360px', margin: '40px auto' },
     children: content
   });
 };
