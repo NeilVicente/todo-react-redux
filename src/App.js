@@ -22,7 +22,7 @@ export default () => {
   )
   return (
     <Paper
-      style={{ width: '360px', margin: '40px auto' }}
+      style={{ margin: '40px auto' }}
       children={ content } 
     />
   )
