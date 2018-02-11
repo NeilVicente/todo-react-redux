@@ -23,8 +23,9 @@ const TodoList = (props) => {
           label='Show completed todos'
           style={{
             block: {
-              maxWidth: 250,
+              maxWidth: '100%',
             }}}
+          labelPosition='right'
           defaultToggled={ props.showCompleted }
           onToggle={ props.onToggleCompleted }
         />
