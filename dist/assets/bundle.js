@@ -16430,7 +16430,7 @@ exports.default = function () {
     )
   );
   return _react2.default.createElement(_Paper2.default, {
-    style: { margin: '40px auto' },
+    style: { margin: '10px auto' },
     children: content
   });
 };
@@ -42227,8 +42227,9 @@ var TodoList = function TodoList(props) {
         label: 'Show completed todos',
         style: {
           block: {
-            maxWidth: 250
+            maxWidth: '100%'
           } },
+        labelPosition: 'right',
         defaultToggled: props.showCompleted,
         onToggle: props.onToggleCompleted
       })
