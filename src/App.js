@@ -15,14 +15,14 @@ export default () => {
         zDepth={2}
       />
       <div style={{padding: '30px'}}>
-        <TodoList/>
+        <TodoList />
         <TodoInput />
       </div>
     </div>
   )
   return (
     <Paper
-      style={{ margin: '40px auto' }}
+      style={{ margin: '10px auto' }}
       children={ content } 
     />
   )
