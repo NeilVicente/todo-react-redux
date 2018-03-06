@@ -54,8 +54,18 @@ export const todoInput = (state = '', action) => {
   }
 }
 
+export const visibilityFilter = (state = 'all', action) => {
+  switch (action.type) {
+    case C.SET_VISIBILITY_FILTER:
+      return action.payload;
+    default:
+      return state;
+  }
+}
+
 export default combineReducers({
   allTodos,
   showCompleted: toggleCompleted,
-  todoInput
+  todoInput,
+  visibilityFilter,
 })

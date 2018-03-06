@@ -5,31 +5,24 @@ import { Divider } from 'material-ui/Divider';
 
 const TodoList = (props) => {
   const createListItem = (todo, i) => {
-    if (!props.showCompleted && todo.completed) { return }
+    let visible = true
+    if ((props.visibilityFilter === 'active' && todo.completed)
+      || (props.visibilityFilter === 'completed' && !todo.completed)) {
+      visible = false;
+    }
     return (
       <div>
         <Todo
           text={`${todo.text}`}
           checked={ todo.completed }
           todoKey={i}
+          visible={visible}
         />
       </div>
     )
   }
   return (
     <div>
-      <div>
-        <Toggle
-          label='Show completed todos'
-          style={{
-            block: {
-              maxWidth: '100%',
-            }}}
-          labelPosition='right'
-          defaultToggled={ props.showCompleted }
-          onToggle={ props.onToggleCompleted }
-        />
-      </div>
       <div>
         <List>
           { props.todos.map(createListItem) }

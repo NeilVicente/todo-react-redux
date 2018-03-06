@@ -17,6 +17,9 @@ const Todo = (props) => {
   if (props.checked) {
     style.textDecoration = 'line-through'
   }
+  if (!props.visible) {
+    style.display = 'none'
+  }
   return (
     <ListItem
       primaryText={ props.text }

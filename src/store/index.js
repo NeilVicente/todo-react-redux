@@ -10,11 +10,11 @@ const consoleMesssages = store => next => action => {
   console.log('todos', store.getState().allTodos.length)
   result = next(action)
 
-  let { allTodos, showCompleted } = store.getState()
+  let { allTodos, visibilityFilter } = store.getState()
 
   console.log(`
       todos: ${allTodos.length}
-      showCompleted: ${showCompleted}
+      visibilityFilter: ${visibilityFilter}
   `)
   console.groupEnd()
   return result

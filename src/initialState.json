@@ -18,6 +18,7 @@
     }
   ],
   "showCompleted": true,
-  "todoInput": ""
+  "todoInput": "",
+  "visibilityFilter": ""
 }
 

@@ -7,7 +7,7 @@ import { showCompleted, hideCompleted } from '../../actions'
 const mapStateToProps = state => {
   return {
     todos: state.allTodos,
-    showCompleted: state.showCompleted
+    visibilityFilter: state.visibilityFilter
   }
 }
 

@@ -36,3 +36,8 @@ export const setTodoInput = (text) => ({
   type: C.SET_TODOINPUT,
   payload: text
 })
+
+export const setVisibilityFilter = (filter) => ({
+  type: C.SET_VISIBILITY_FILTER,
+  payload: filter
+})

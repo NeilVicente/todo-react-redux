@@ -2,6 +2,7 @@ import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import TodoInput from './TodoInput'
 import TodoList from './TodoList';
+import VisibilityFilter from './VisibilityFilter'
 import Paper from 'material-ui/Paper'
 import AppBar from 'material-ui/AppBar'
 import CheckIcon from 'material-ui/svg-icons/av/playlist-add-check'
@@ -21,6 +22,7 @@ export default () => {
       <div style={{padding: '30px'}}>
         <TodoList />
         <TodoInput />
+        <VisibilityFilter/>
       </div>
     </div>
   )
