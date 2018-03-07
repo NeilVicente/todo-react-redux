@@ -17026,7 +17026,7 @@ _reactDom2.default.render(_react2.default.createElement(
     null,
     _react2.default.createElement(
       _reactRouterDom.BrowserRouter,
-      null,
+      { basename: "/react-redux-todo/" },
       _react2.default.createElement(_App2.default, null)
     )
   )

@@ -17,7 +17,7 @@ window.store = store
 ReactDOM.render(
   <Provider store={ store }>
     <MuiThemeProvider>
-      <Router>
+      <Router basename={BASENAME}>
         <App />
       </Router>
     </MuiThemeProvider>
