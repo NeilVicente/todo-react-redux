@@ -14,7 +14,7 @@ const VisibilityFilter = (props) => {
     )
   }
   return (
-    <div style={{ margin: '10px'}}>
+    <div style={{ margin: '30px 0'}}>
       { ['All', 'Active', 'Completed'].map(renderButton) }
     </div>
   )

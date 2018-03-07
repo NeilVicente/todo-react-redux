@@ -20,7 +20,7 @@ export default () => {
         zDepth={2}
         iconElementLeft={<IconButton><CheckIcon/></IconButton>}
       />
-      <div style={{padding: '30px'}}>
+      <div style={{padding: '10px 14px 20px'}}>
         <Route path='/:filter?' render={(props) => {
           return (
             <div>

@@ -1,14 +1,14 @@
 import React from 'react';
-import FlatButton from 'material-ui/FlatButton'
+import RaisedButton from 'material-ui/RaisedButton'
 import { Link } from 'react-router-dom'
 
 const FilterButton = (props) => {
   return (
     <Link to={`/${props.text.toLowerCase()}`}>
-      <FlatButton
+      <RaisedButton
         label={props.text}
         disabled={props.disabled}
-        primary={true}
+        primary={false}
         disableTouchRipple={true}
       />
     </Link>
