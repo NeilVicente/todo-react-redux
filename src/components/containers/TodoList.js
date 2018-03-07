@@ -7,7 +7,7 @@ import { showCompleted, hideCompleted } from '../../actions'
 const mapStateToProps = (state, ownProps)=> {
   return {
     todos: state.allTodos,
-    filter: ownProps.location.pathname.replace('/', '')
+    filter: ownProps.match.params.filter
   }
 }
 

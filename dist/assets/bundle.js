@@ -17854,7 +17854,7 @@ exports.default = function () {
     _react2.default.createElement(
       'div',
       { style: { padding: '30px' } },
-      _react2.default.createElement(_reactRouterDom.Route, { path: ':filter?', render: function render(props) {
+      _react2.default.createElement(_reactRouterDom.Route, { path: '/:filter?', render: function render(props) {
           return _react2.default.createElement(
             'div',
             null,
@@ -43468,7 +43468,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var mapStateToProps = function mapStateToProps(state, ownProps) {
   return {
     todos: state.allTodos,
-    filter: ownProps.location.pathname.replace('/', '')
+    filter: ownProps.match.params.filter
   };
 };
 
@@ -63655,7 +63655,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var mapStateToProps = function mapStateToProps(state, ownProps) {
   return {
-    filter: ownProps.location.pathname.replace('/', '')
+    filter: ownProps.match.params.filter
   };
 };
 

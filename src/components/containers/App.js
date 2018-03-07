@@ -21,7 +21,7 @@ export default () => {
         iconElementLeft={<IconButton><CheckIcon/></IconButton>}
       />
       <div style={{padding: '30px'}}>
-        <Route path=':filter?' render={(props) => {
+        <Route path='/:filter?' render={(props) => {
           return (
             <div>
               <TodoList {...props}/>

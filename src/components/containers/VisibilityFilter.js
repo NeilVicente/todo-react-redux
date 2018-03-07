@@ -5,7 +5,7 @@ import VisibilityFilter from '../ui/VisibilityFilter'
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    filter: ownProps.location.pathname.replace('/', '')
+    filter: ownProps.match.params.filter
   }
 }
 
