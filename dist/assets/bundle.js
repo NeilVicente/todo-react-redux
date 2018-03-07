@@ -63727,7 +63727,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var FilterButton = function FilterButton(props) {
   return _react2.default.createElement(
     _reactRouterDom.Link,
-    { to: '/' + props.text.toLowerCase() },
+    { to: '' + props.text.toLowerCase() },
     _react2.default.createElement(_FlatButton2.default, {
       label: props.text,
       disabled: props.disabled,
