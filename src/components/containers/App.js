@@ -15,7 +15,7 @@ export default () => {
   const content = (
     <div key='div'>
       <AppBar
-        title={ 'React Redux Todo '}
+        title={ 'Todo List'}
         iconStyleLeft={{ cursor: 'default'}}
         zDepth={2}
         iconElementLeft={<IconButton><CheckIcon/></IconButton>}
@@ -35,7 +35,7 @@ export default () => {
   )
   return (
     <Paper
-      style={{ margin: '10px auto' }}
+      style={{ margin: '10px auto', maxWidth: '80em' }}
       children={ content } 
     />
   )
