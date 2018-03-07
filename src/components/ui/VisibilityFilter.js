@@ -3,11 +3,12 @@ import FilterButton from './FilterButton'
 
 const VisibilityFilter = (props) => {
   const renderButton = (text, i) => {
+    const disabled = props.filter === text.toLowerCase() || !props.filter && text.toLowerCase() === 'all';
     return (
       <FilterButton
         onClick={props.onClick}
         text={text}
-        disabled={props.visibilityFilter === text.toLowerCase()}
+        disabled={disabled}
         key={i}
       />
     )

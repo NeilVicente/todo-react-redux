@@ -3,20 +3,10 @@ import { connect } from 'react-redux'
 import { setVisibilityFilter } from '../../actions'
 import VisibilityFilter from '../ui/VisibilityFilter'
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, ownProps) => {
   return {
-    visibilityFilter: state.visibilityFilter
+    filter: ownProps.match.params.filter
   }
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    onClick: (filter) => {
-      dispatch(
-        setVisibilityFilter(filter)
-      )
-    }
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(VisibilityFilter)
+export default connect(mapStateToProps)(VisibilityFilter)

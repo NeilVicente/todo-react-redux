@@ -6,8 +6,8 @@ import { Divider } from 'material-ui/Divider';
 const TodoList = (props) => {
   const createListItem = (todo, i) => {
     let visible = true
-    if ((props.visibilityFilter === 'active' && todo.completed)
-      || (props.visibilityFilter === 'completed' && !todo.completed)) {
+    if ((props.filter === 'active' && todo.completed)
+      || (props.filter === 'completed' && !todo.completed)) {
       visible = false;
     }
     return (

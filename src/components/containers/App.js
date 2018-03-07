@@ -7,6 +7,7 @@ import Paper from 'material-ui/Paper'
 import AppBar from 'material-ui/AppBar'
 import CheckIcon from 'material-ui/svg-icons/av/playlist-add-check'
 import IconButton from 'material-ui/IconButton'
+import { Route } from 'react-router-dom'
 
 
 export default () => {
@@ -20,9 +21,15 @@ export default () => {
         iconElementLeft={<IconButton><CheckIcon/></IconButton>}
       />
       <div style={{padding: '30px'}}>
-        <TodoList />
-        <TodoInput />
-        <VisibilityFilter/>
+        <Route path='/:filter?' render={(props) => {
+          return (
+            <div>
+              <TodoList {...props}/>
+              <TodoInput />
+              <VisibilityFilter {...props}/>
+            </div>
+          )
+        }}/>
       </div>
     </div>
   )
