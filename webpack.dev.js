@@ -1,43 +1,11 @@
+const common = require('./webpack.config.js')
+const merge = require('webpack-merge')
+const webpack = require('webpack')
 
-module.exports = {
-
-    entry: "./src/index.js",
-    context: __dirname,
-    output: {
-        path: __dirname + "/dist/assets",
-        filename: "bundle.js",
-        publicPath: "assets"
-    },
-    devServer: {
-        inline: true,
-        contentBase: './dist',
-        port: 3000
-    },
-    module: {
-        loaders: [
-            {
-                test: /\.js$/,
-                exclude: /(node_modules)/,
-                loader: 'babel-loader',
-                query: {
-                    presets: ['env', 'stage-0', 'react']
-                }
-            },
-            {
-                test: /\.json$/,
-                exclude: /(node_modules)/,
-                loader: 'json-loader'
-            },
-            {
-                test: /\.css$/,
-                loader: 'style-loader!css-loader!autoprefixer-loader'
-
-            },
-            {
-                test: /\.scss/,
-                loader: 'style-loader!css-loader!autoprefixer-loader!sass-loader'
-            }
-        ]
-    },
-  }
-
+module.exports = merge(common, {
+    plugins: [
+      new webpack.DefinePlugin({
+        BASENAME: JSON.stringify('/')
+      })
+    ]
+})
