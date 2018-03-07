@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const FilterButton = (props) => {
   return (
-    <Link to={`${props.text.toLowerCase()}`}>
+    <Link to={`/${props.text.toLowerCase()}`}>
       <FlatButton
         label={props.text}
         disabled={props.disabled}
