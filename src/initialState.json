@@ -15,6 +15,10 @@
     {
       "text": "Workout",
       "completed": false
+    },
+    {
+      "text": "Do the laundry",
+      "completed": false
     }
   ],
   "showCompleted": true,
